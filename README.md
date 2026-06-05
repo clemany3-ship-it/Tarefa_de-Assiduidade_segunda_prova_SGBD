@@ -36,16 +36,28 @@ Os projetos abordam:
 
 
  Projetos-SQLServer
+ 
 │
+
 ├──  Biblioteca.sql
+
 ├──  BibliotecaUniversitaria.sql
+
 ├──  GestaoProjetosDB (2).sql
+
 ├──  GestaoProjetosDB.sql
+
 ├──  pratica.sql
+
 ├──  SistemaEncomendas.sql
+
 ├──  SistemaEncomendas_CREATE INDEX.sql
+
 ├──  SistemaSeguranca.sql
+
 ├──  ransicao.sql
+
 └── README.md
+
 
 Autor: Clemente Manuel Dinis José
