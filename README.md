@@ -30,12 +30,12 @@ Os projetos abordam:
 - Transações
 - Auditoria SQL
 
----
 
-# 📂 Estrutura do Repositório
 
-```bash
-📁 Projetos-SQLServer
+#  Estrutura do Repositório
+
+
+ Projetos-SQLServer
 │
 ├──  Biblioteca.sql
 ├──  BibliotecaUniversitaria.sql
