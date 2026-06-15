@@ -1,6 +1,6 @@
--- =====================================================
+
 -- BASE DE DADOS: CONTROLO DE ACESSO E PERMISSÕES
--- =====================================================
+
 
 CREATE DATABASE SistemaSeguranca;
 GO
@@ -8,9 +8,9 @@ GO
 USE SistemaSeguranca;
 GO
 
--- =====================================================
+
 -- TABELA UTILIZADORES
--- =====================================================
+
 
 CREATE TABLE Utilizadores (
 UtilizadorID INT PRIMARY KEY IDENTITY(1,1),
@@ -46,9 +46,9 @@ DataCriacao DATETIME DEFAULT GETDATE()
 );
 GO
 
--- =====================================================
+
 -- TABELA PERMISSOES
--- =====================================================
+
 
 CREATE TABLE Permissoes (
 PermissaoID INT PRIMARY KEY IDENTITY(1,1),
@@ -62,9 +62,8 @@ Descricao VARCHAR(255)
 );
 GO
 
--- =====================================================
 -- TABELA UTILIZADOR_PERMISSOES
--- =====================================================
+
 
 CREATE TABLE UtilizadorPermissoes (
 ID INT PRIMARY KEY IDENTITY(1,1),
@@ -88,9 +87,9 @@ UNIQUE (UtilizadorID, PermissaoID)
 );
 GO
 
--- =====================================================
+
 -- TABELA LOG DE ACESSO
--- =====================================================
+
 
 CREATE TABLE LogAcesso (
 LogID INT PRIMARY KEY IDENTITY(1,1),
@@ -118,9 +117,9 @@ FOREIGN KEY (UtilizadorID)
 );
 GO
 
--- =====================================================
+
 -- INSERÇÃO DE DADOS
--- =====================================================
+
 
 INSERT INTO Utilizadores
 (Nome, Username, PalavraPasse, TipoUtilizador)
@@ -165,9 +164,9 @@ VALUES
 (3, '192.168.1.20', 'Sucesso');
 GO
 
--- =====================================================
+
 -- CONSULTAS IMPORTANTES
--- =====================================================
+
 
 -- Ver todos os utilizadores
 SELECT * FROM Utilizadores;
@@ -194,9 +193,9 @@ ON L.UtilizadorID = U.UtilizadorID;
 
 GO
 
--- =====================================================
+
 -- CRIAÇÃO DE ÍNDICES
--- =====================================================
+
 
 CREATE INDEX IDX_Utilizadores_Username
 ON Utilizadores(Username);
@@ -206,9 +205,9 @@ CREATE INDEX IDX_LogAcesso_UtilizadorID
 ON LogAcesso(UtilizadorID);
 GO
 
--- =====================================================
+
 -- REMOVER ÍNDICES
--- =====================================================
+
 
 DROP INDEX IDX_Utilizadores_Username
 ON Utilizadores;
